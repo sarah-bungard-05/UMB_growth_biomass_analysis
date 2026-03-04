@@ -7,8 +7,9 @@ folder = 'vars';
 
 %% creating files with averages
 %Read data from US-UMB Ameriflux Network
-UMBHR= readtable("C:\Users\sarah\Documents\BandDendrometer\AMF_US-UMB_BASE-BADM_15-5\FLX_US-UMB_FLUXNET2015_SUBSET_HR_2000-2014_1-4.csv");
-UMBHH=readtable("C:\Users\sarah\Documents\BandDendrometer\AMF_US-UMB_BASE-BADM_15-5\AMF_US-UMB_FLUXNET_FULLSET_HH_2007-2021_3-5.csv");
+%Download both hourly and half hourly FLUXNET data from US-UMB AmeriFlux tower and change paths
+UMBHR= readtable("ADD PATH");
+UMBHH=readtable("ADD PATH");
 
 % Creating a matrix  of dates corresponding with AF data
 TimeHR = datetime(num2str(UMBHR.TIMESTAMP_START),'InputFormat','yyyyMMddHHmm');
@@ -320,5 +321,6 @@ end
 
 save(fullfile(folder,'annualGPP.mat'), 'annualGPP');
 end
+
 
 
