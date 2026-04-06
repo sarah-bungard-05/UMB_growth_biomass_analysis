@@ -13,3 +13,5 @@ Description of functions:
 - environmentalMean.m reads in downloaded data from Ameriflux and calculated three-month season means (DJF, MAM, JJA, SON) and growing/dormant season means of SWC, VPD, PAR, and TA. It also restructures SPI data from the SPI input file to match the other variables.
 - normalGLM.m creates linear models comparing each season at a time lag of up to three years with trending or detrended biomass increment or diameter growth assuming normal distribution of data. Results are summarized in .xlsx tables and heatmaps.
 - generateGraphs.m recreates figures 2-6.
+- joinEnvironmentalShort.m adds columns for each season and lag of SWC, VPD, TA, PAR, and SPI to the clean band dendrometer data, matching year of growth observation with year of environmental variable.
+- joinEnvironmentalShort_D.m functions similarly to joinEvironmentalShort_D.m, just using detrended environmental data.
